@@ -1,0 +1,31 @@
+{
+    "products" :
+    [
+       {
+         "productTitle":"Salted Caramel Cupcake",
+         "productDescription" : "A rich and indulgent treat, our Salted Caramel Cupcake features a moist, golden sponge topped with velvety salted caramel buttercream. Finished with a drizzle of sweet caramel sauce and a sprinkle of sea salt, it's the perfect balance of sweet and savory. A deliciously satisfying dessert for any occasion!",
+         "productSKU": "E",
+         "productPrice" : "200",
+         "productImage" :"assets/images/cupcake-saltedCaramel.png",
+         "productCategory":"Cupcakes"
+       },
+       {
+        "productTitle":"Carrot Cake Cupcake",
+        "productDescription" : "Our Carrot Cake Cupcake is a classic favorite with a twist. Made with a moist, spiced carrot sponge and hints of cinnamon and nutmeg, it’s topped with a smooth cream cheese frosting for the perfect balance of sweetness and tang. Finished with a sprinkle of chopped walnuts or a touch of cinnamon, it’s a deliciously wholesome treat!",
+        "productSKU": "E",
+        "productPrice" : "200",
+        "productImage" :"assets/images/cupcake-carrotCake.jpg",
+        "productCategory":"Cupcakes"
+      },
+      {
+        "productTitle":"Biscoff Filling Cupcake",
+        "productDescription" : "Our Biscoff Cupcake is a heavenly blend of warm, spiced flavors and creamy indulgence. With a soft, cinnamon-infused sponge, it’s topped with a smooth Biscoff-flavored buttercream and finished with a drizzle of Biscoff spread and a crunchy biscuit crumble. Perfect for lovers of rich, caramelized sweetness!",
+        "productSKU": "E",
+        "productPrice" : "200",
+        "productImage" :"assets/images/cupcake-extra.jpg",
+        "productCategory":"Cupcakes"
+      }
+    ]
+}
+     
+   
