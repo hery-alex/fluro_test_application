@@ -24,6 +24,102 @@
         "productPrice" : "200",
         "productImage" :"assets/images/cupcake-extra.jpg",
         "productCategory":"Cupcakes"
+      },
+      {
+        "productTitle":"Chocolate Croissant",
+        "productDescription" : "Our Chocolate Croissant is a buttery, flaky pastry with a rich twist. Baked to golden perfection, it’s filled with smooth, melted chocolate that oozes with every bite. Whether enjoyed warm or at room temperature, it’s the ultimate treat for chocolate and pastry lovers alike—perfect for breakfast, a snack, or an indulgent moment anytime!",
+        "productSKU": "D",
+        "productPrice" : "150",
+        "productImage" :"assets/images/croissant_chocolate.jpg",
+        "productCategory":"Croissant"
+      },
+      {
+        "productTitle":"Glazed Croissant",
+        "productDescription" : "Our Glazed Croissant is a delightful twist on a classic favorite. With its light, flaky layers and buttery richness, it’s coated in a glossy, sweet glaze that adds a perfect touch of indulgence. Ideal for breakfast, a snack, or a treat on the go, it's a simple yet irresistible pastry for any time of day!",
+        "productSKU": "D",
+        "productPrice" : "150",
+        "productImage" :"assets/images/croissant_glazed.jpg",
+        "productCategory":"Croissant"
+      },
+      {
+        "productTitle":"Almonds Croissant",
+        "productDescription" : "Our Almond Croissant is a luxurious treat with a nutty twist. Made with a buttery, flaky croissant, it’s filled with a rich almond cream and topped with a generous layer of sliced almonds and a dusting of powdered sugar. Perfectly golden and irresistibly sweet, it’s a decadent pastry for almond lovers and a perfect pairing with your favorite coffee or tea!",
+        "productSKU": "D",
+        "productPrice" : "150",
+        "productImage" :"assets/images/croissant_almonds.jpg",
+        "productCategory":"Croissant"
+      },
+      {
+        "productTitle":"Lemon Muffin",
+        "productDescription" : "Our Lemon Muffin is a zesty delight, bursting with fresh citrus flavor. Soft and fluffy, it’s made with real lemon zest and juice for a bright, tangy taste in every bite. Finished with a light glaze or sugar topping, it’s the perfect balance of sweet and tart—an uplifting treat for any time of the day!",
+        "productSKU": "B",
+        "productPrice" : "75",
+        "productImage" :"assets/images/muffin-lemon.jpg",
+        "productCategory":"Muffin"
+      },
+      {
+        "productTitle":"Raspberry Muffin",
+        "productDescription" : "Our Raspberry Muffin is a fruity and flavorful treat, packed with juicy raspberries baked into a soft, golden batter. Each bite offers a delightful balance of sweet and tangy, with a light, fluffy texture. Perfect for breakfast, a snack, or a sweet pick-me-up, it’s a berry lover’s dream!",
+        "productSKU": "B",
+        "productPrice" : "75",
+        "productImage" :"assets/images/muffins-raspberry.jpg",
+        "productCategory":"Muffin"
+      },
+      {
+        "productTitle":"Sulatans Muffin",
+        "productDescription" : "Our Sultana Muffin is a warm and comforting treat, filled with sweet, plump sultanas that add a burst of fruity flavor to every bite. The soft, fluffy muffin base is subtly spiced, creating the perfect balance of sweetness and warmth. Ideal for a cozy breakfast or an afternoon snack, it’s a deliciously satisfying choice!",
+        "productSKU": "B",
+        "productPrice" : "75",
+        "productImage" :"assets/images/muffin-sultanas.jpg",
+        "productCategory":"Muffin"
+      },
+      {
+        "productTitle":"Classic Brownie",
+        "productDescription" : "Our Classic Brownie is a rich and fudgy indulgence, made with the finest ingredients for a perfect balance of chocolatey goodness. With a dense, moist texture and a slightly crisp top, each bite is filled with deep, melt-in-your-mouth flavor. A timeless favorite, it’s the ultimate treat for any chocolate lover!",
+        "productSKU": "C",
+        "productPrice" : "25",
+        "productImage" :"assets/images/brownie_classic.jpg",
+        "productCategory":"Brownie"
+      },
+      {
+        "productTitle":"Mint Brownie",
+        "productDescription" : "Our Mint Brownie is a refreshing twist on a classic favorite. With a rich, fudgy brownie base and a smooth, mint-infused filling, it’s the perfect balance of chocolate and cool mint. Topped with a glossy layer of chocolate, every bite is a delightful mix of indulgence and refreshing minty flavor—an irresistible treat for any time of day!",
+        "productSKU": "C",
+        "productPrice" : "25",
+        "productImage" :"assets/images/brownie_mint.jpg",
+        "productCategory":"Brownie"
+      },
+      {
+        "productTitle":"Oreo Brownie",
+        "productDescription" : "Our Oreo Brownie is the ultimate indulgence for Oreo and chocolate lovers alike. This decadent brownie features a rich, fudgy base studded with crushed Oreo cookies, adding a delightful crunch and a burst of creamy filling. Topped with even more Oreo chunks, it's the perfect combination of smooth chocolate and the signature taste of everyone's favorite cookie!",
+        "productSKU": "C",
+        "productPrice" : "25",
+        "productImage" :"assets/images/brownie_oreo.jpg",
+        "productCategory":"Brownie"
+      },
+      {
+        "productTitle":"Red Velvet Cake",
+        "productDescription" : "Our Red Velvet Cake is a show-stopping treat that combines rich, velvety layers of moist cake with a hint of cocoa flavor. Topped with smooth, creamy cream cheese frosting, it’s the perfect balance of sweet and tangy. The striking red color and indulgent taste make it a memorable dessert for any occasion!",
+        "productSKU": "A",
+        "productPrice" : "2500",
+        "productImage" :"assets/images/cake-redVelvetCake.jpg",
+        "productCategory":"Cake"
+      },
+      {
+        "productTitle":"Carrot Cake ",
+        "productDescription" : "Our Carrot Cake is a deliciously spiced treat made with moist, tender cake and packed with freshly grated carrots. Infused with warm cinnamon and nutmeg, it's topped with a rich cream cheese frosting that adds the perfect tangy sweetness. Finished with a sprinkle of walnuts, it’s a comforting classic that’s perfect for any occasion!",
+        "productSKU": "A",
+        "productPrice" : "2500",
+        "productImage" :"assets/images/cake-carrotCake.jpg",
+        "productCategory":"Cake"
+      },
+      {
+        "productTitle":"Fruit CheeseCake ",
+        "productDescription" : "Our Fruit Cheesecake is a creamy and indulgent dessert topped with a vibrant mix of fresh, seasonal fruits. The rich, velvety cheesecake base is perfectly balanced with a buttery graham cracker crust, while the colorful fruit topping adds a burst of sweetness and freshness. Light yet satisfying, it’s a refreshing treat that’s perfect for any celebration or as a sweet indulgence!",
+        "productSKU": "A",
+        "productPrice" : "2500",
+        "productImage" :"assets/images/cake-fruitCheesecake.jpg",
+        "productCategory":"Cake"
       }
     ]
 }

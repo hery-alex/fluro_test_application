@@ -17,7 +17,6 @@ class ProductsStream {
 
   Future<void> fetchProductsFromJson() async{
      List<ProductModel> result = await repository.getDataFromJson();
-     print('results $result');
      _productsController.sink.add(result);
   }
   

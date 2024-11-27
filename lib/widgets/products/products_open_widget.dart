@@ -17,24 +17,29 @@ class ProductOpenWidget extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              Container(
-                width: 250,
-                height: 250,
-                margin: EdgeInsets.only(top: SizeConfig.safeBlockVertical! * 3),
-                decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  color: Theme.of(context).colorScheme.surface,
-                  image:DecorationImage(
-                  image: Image.asset(productModel.productImage!).image,
-                  fit: BoxFit.fitHeight,
-                 ),
-                 boxShadow:  [
-                  BoxShadow(
-                  offset:const Offset(0, 4),
-                  blurRadius:4.0,
-                  color:const Color(0xff000000).withOpacity(0.4),
-                ),
-                 ]
+              InkWell(
+                onTap: (){
+                  Navigator.of(context).pop();
+                },
+                child: Container(
+                  width: 250,
+                  height: 250,
+                  margin: EdgeInsets.only(top: SizeConfig.safeBlockVertical! * 3),
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: Theme.of(context).colorScheme.surface,
+                    image:DecorationImage(
+                    image: Image.asset(productModel.productImage!).image,
+                    fit: BoxFit.fitHeight,
+                   ),
+                   boxShadow:  [
+                    BoxShadow(
+                    offset:const Offset(0, 4),
+                    blurRadius:4.0,
+                    color:const Color(0xff000000).withOpacity(0.4),
+                  ),
+                   ]
+                  ),
                 ),
               ),
             ],
