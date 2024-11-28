@@ -62,11 +62,11 @@
         "productDescription" : "Our Raspberry Muffin is a fruity and flavorful treat, packed with juicy raspberries baked into a soft, golden batter. Each bite offers a delightful balance of sweet and tangy, with a light, fluffy texture. Perfect for breakfast, a snack, or a sweet pick-me-up, it’s a berry lover’s dream!",
         "productSKU": "B",
         "productPrice" : "75",
-        "productImage" :"assets/images/muffins-raspberry.jpg",
+        "productImage" :"assets/images/raspberry_muffin.jpg",
         "productCategory":"Muffin"
       },
       {
-        "productTitle":"Sulatans Muffin",
+        "productTitle":"Sultanas Muffin",
         "productDescription" : "Our Sultana Muffin is a warm and comforting treat, filled with sweet, plump sultanas that add a burst of fruity flavor to every bite. The soft, fluffy muffin base is subtly spiced, creating the perfect balance of sweetness and warmth. Ideal for a cozy breakfast or an afternoon snack, it’s a deliciously satisfying choice!",
         "productSKU": "B",
         "productPrice" : "75",

@@ -2,6 +2,7 @@
 import 'package:fluro_test_application/assets/assets_images.dart';
 import 'package:fluro_test_application/config/size_config.dart';
 import 'package:fluro_test_application/models/product_model/product_model.dart';
+import 'package:fluro_test_application/widgets/products/product_category_widget.dart';
 import 'package:flutter/material.dart';
 
 class ProductOpenWidget extends StatelessWidget {
@@ -30,15 +31,13 @@ class ProductOpenWidget extends StatelessWidget {
                   Navigator.of(context).pop();
                 },
                 child: Container(
-                  width: 250,
+                  width: SizeConfig.screenWidth,
                   height: 250,
-                  margin: EdgeInsets.only(top: SizeConfig.safeBlockVertical! * 3),
                   decoration: BoxDecoration(
-                    shape: BoxShape.circle,
                     color: Theme.of(context).colorScheme.surface,
                     image:DecorationImage(
                     image: Image.asset(productModel.productImage!).image,
-                    fit: BoxFit.fitHeight,
+                    fit: BoxFit.fill,
                   ),
                   boxShadow:  [
                     BoxShadow(
@@ -89,6 +88,8 @@ class ProductOpenWidget extends StatelessWidget {
                      ),
                    ],
                  ),
+                const SizedBox(height: 20,),
+                ProductCategoryWidget(productModel: productModel,), 
               
             ],
           ),

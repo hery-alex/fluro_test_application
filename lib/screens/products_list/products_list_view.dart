@@ -11,7 +11,7 @@ class ProductsListView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding:const EdgeInsets.symmetric(horizontal: 16,vertical: 21),
+      padding:const EdgeInsets.symmetric(horizontal: 16,vertical: 10),
       width: SizeConfig.screenWidth,
       child: StreamBuilder<Object>(
         stream: ProductsProvider.of(context)!.products.productsList,
@@ -25,7 +25,7 @@ class ProductsListView extends StatelessWidget {
               crossAxisCount: 2,
               mainAxisSpacing: 20,
               crossAxisSpacing: 20,
-              childAspectRatio: 4/7
+              childAspectRatio: 4/6
               ), 
             itemBuilder: (context,int index){
                
