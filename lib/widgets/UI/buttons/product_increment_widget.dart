@@ -1,4 +1,4 @@
-import 'package:fluro_test_application/widgets/UI/buttons/add_button.dart';
+import 'package:fluro_test_application/widgets/ui/buttons/add_button.dart';
 import 'package:flutter/material.dart';
 
 class WidgetIncrementProduct extends StatefulWidget {

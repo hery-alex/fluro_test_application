@@ -1,6 +1,6 @@
 import 'package:fluro_test_application/config/size_config.dart';
 import 'package:fluro_test_application/models/product_model/product_model.dart';
-import 'package:fluro_test_application/widgets/UI/buttons/product_increment_widget.dart';
+import 'package:fluro_test_application/widgets/ui/buttons/product_increment_widget.dart';
 import 'package:flutter/material.dart';
 
 class ProductClosedWidget extends StatelessWidget {

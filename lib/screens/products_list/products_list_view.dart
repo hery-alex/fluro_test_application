@@ -20,6 +20,7 @@ class ProductsListView extends StatelessWidget {
             return const CircularProgressIndicator();
           }
           return GridView.builder(
+            padding: const EdgeInsets.only(top: 100),
             itemCount: productsDataList.data.length,
             gridDelegate:const SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 2,
