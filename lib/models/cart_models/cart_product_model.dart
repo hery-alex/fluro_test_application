@@ -21,9 +21,9 @@ class CartProductModel {
   double? totalPriceForProduct
  }){
   return CartProductModel(
-     productChosen : productChosen ?? productChosen,
-     productQuantity: productQuantity ?? productQuantity,
-     totalPriceForProduct : totalPriceForProduct ?? totalPriceForProduct
+     productChosen : productChosen ?? this.productChosen,
+     productQuantity: productQuantity ?? this.productQuantity,
+     totalPriceForProduct : totalPriceForProduct ?? this.totalPriceForProduct
   );
  }
 

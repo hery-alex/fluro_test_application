@@ -100,7 +100,12 @@ class _WidgetIncrementProductState extends State<WidgetIncrementProduct> with He
           height: 40,
           margin: const EdgeInsets.only(top: 20),
           child: InkWell(
-            onTap:()=>addProductToCart(widget.productModel,startUpNumber),
+            onTap:(){
+              addProductToCart(widget.productModel,startUpNumber);
+              setState(() {
+                startUpNumber = 0;
+              });
+            },
             child:  Container(
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(8),

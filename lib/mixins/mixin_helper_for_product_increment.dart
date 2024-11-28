@@ -10,10 +10,13 @@ mixin HelperFunctionsProductIncrementWidget<T extends StatefulWidget> on State<T
      List<CartProductModel> myCart =[];
     if(CartProvider.of(context)!.cart.currentCart != null && CartProvider.of(context)!.cart.currentCart!.isNotEmpty){
       for(var model in CartProvider.of(context)!.cart.currentCart!){ 
+        
         if(model.productChosen!.productCode == productModel.productCode ){
          if( model.productQuantity != productQuantity){
-           model.copyWith(productQuantity:productQuantity,totalPriceForProduct:productModel.productPrice! * productQuantity );
-           myCart.add(model);
+          print(' model ${model.productQuantity}');
+          CartProductModel newModel = model.copyWith(productQuantity:productQuantity,totalPriceForProduct:productModel.productPrice! * productQuantity );
+          print('new model ${newModel.productQuantity}');
+           myCart.add(newModel);
           }else{
            myCart.add(model);
           }
@@ -27,14 +30,14 @@ mixin HelperFunctionsProductIncrementWidget<T extends StatefulWidget> on State<T
          }else{
            myCart.add(model);
          }
-             int secondindex = myCart.indexWhere((element)=> element.productChosen!.productCode == productModel.productCode);
-              if(secondindex == -1){
-                  myCart.add(CartProductModel(
-                  productChosen: productModel,
-                  productQuantity: productQuantity,
-                  totalPriceForProduct: productModel.productPrice! * productQuantity
-                ));
-              }
+        int secondindex = myCart.indexWhere((element)=> element.productChosen!.productCode == productModel.productCode);
+        if(secondindex == -1){
+            myCart.add(CartProductModel(
+            productChosen: productModel,
+            productQuantity: productQuantity,
+            totalPriceForProduct: productModel.productPrice! * productQuantity
+          ));
+        }
        }
 
         
