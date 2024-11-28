@@ -1,4 +1,5 @@
 
+import 'package:fluro_test_application/assets/assets_images.dart';
 import 'package:fluro_test_application/config/size_config.dart';
 import 'package:fluro_test_application/models/product_model/product_model.dart';
 import 'package:flutter/material.dart';
@@ -12,7 +13,14 @@ class ProductOpenWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Container(
-        color: Colors.white,
+        decoration: BoxDecoration(
+          image:DecorationImage(
+            image: FluroImageAssets.openContainerBackgroundImage,
+            fit: BoxFit.cover,
+            opacity: 0.2,
+          ),
+         color: Colors.blueGrey[200],
+        ),
         child: SingleChildScrollView(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
@@ -31,17 +39,57 @@ class ProductOpenWidget extends StatelessWidget {
                     image:DecorationImage(
                     image: Image.asset(productModel.productImage!).image,
                     fit: BoxFit.fitHeight,
-                   ),
-                   boxShadow:  [
+                  ),
+                  boxShadow:  [
                     BoxShadow(
                     offset:const Offset(0, 4),
                     blurRadius:4.0,
                     color:const Color(0xff000000).withOpacity(0.4),
                   ),
-                   ]
+                  ]
                   ),
                 ),
               ),
+              const SizedBox(height: 10,),
+              Container(
+                padding: const EdgeInsets.symmetric(horizontal: 16),
+                child: Text.rich(
+                  textAlign: TextAlign.center,
+                  TextSpan(
+                    text: '${productModel.productTitle}',
+                    style:  TextStyle(
+                      color: Colors.grey[800],
+                      fontWeight: FontWeight.w900,
+                      fontStyle: FontStyle.italic,
+                      fontFamily: 'Open Sans',
+                      fontSize: 40),
+                  )
+                ),
+              ),
+               const SizedBox(height: 20,),
+                 Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                   children: [
+                     Flexible(
+                       child: Container(
+                        padding: const EdgeInsets.symmetric(horizontal: 16),
+                        child: Text.rich(
+                        textAlign: TextAlign.start,
+                        TextSpan(
+                          text: '    ${productModel.productDescription}',
+                          style:  TextStyle(
+                            color: Colors.grey[850],
+                            fontWeight: FontWeight.w700,
+                            fontStyle: FontStyle.normal,
+                            fontFamily: 'Open Sans',
+                            fontSize: 16),
+                        )
+                       ),
+                       ),
+                     ),
+                   ],
+                 ),
+              
             ],
           ),
         ),
