@@ -1,4 +1,5 @@
 import 'package:fluro_test_application/routes/routes_configuration.dart';
+import 'package:fluro_test_application/states/cart/cart_provider.dart';
 import 'package:fluro_test_application/states/products/products_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -19,10 +20,12 @@ class FluroCheckoutApplication extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ProductsProvider(
-      child: MaterialApp(
-        title: 'Fluro Test',
-        initialRoute: '/',
-        onGenerateRoute: (settings) => RoutesConfiguration.onGenerateRoute(settings),
+      child: CartProvider(
+        child: MaterialApp(
+          title: 'Fluro Test',
+          initialRoute: '/',
+          onGenerateRoute: (settings) => RoutesConfiguration.onGenerateRoute(settings),
+        ),
       ),
     );
   }

@@ -1,6 +1,7 @@
 import 'package:fluro_test_application/config/size_config.dart';
 import 'package:fluro_test_application/layout/layout_with_background.dart';
 import 'package:fluro_test_application/screens/products_list/products_list_view.dart';
+import 'package:fluro_test_application/screens/shopping_cart/shopping_cart_view.dart';
 import 'package:flutter/material.dart';
 
 
@@ -18,6 +19,8 @@ class RoutesConfiguration implements RouteConfig{
           showBackButton: false,
           child: ProductsListView(),
         );
+      case '/cart': 
+        return const ShoppingCartView();  
       default : 
         return const SizedBox();    
     }

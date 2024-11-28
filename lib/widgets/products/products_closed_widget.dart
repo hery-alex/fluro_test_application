@@ -72,7 +72,7 @@ class ProductClosedWidget extends StatelessWidget {
           const SizedBox(height: 10),
          Container(
           margin: const EdgeInsets.only(top: 10),
-          child: const WidgetIncrementProduct()
+          child: WidgetIncrementProduct(productModel: productModel,)
           ),
         ],
       ),

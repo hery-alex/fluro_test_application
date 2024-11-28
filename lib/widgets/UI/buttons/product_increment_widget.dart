@@ -1,14 +1,16 @@
-import 'package:fluro_test_application/widgets/ui/buttons/add_button.dart';
+import 'package:fluro_test_application/mixins/mixin_helper_for_product_increment.dart';
+import 'package:fluro_test_application/models/product_model/product_model.dart';
 import 'package:flutter/material.dart';
 
 class WidgetIncrementProduct extends StatefulWidget {
-  const WidgetIncrementProduct({super.key});
+  final ProductModel productModel;
+  const WidgetIncrementProduct({super.key,required this.productModel});
 
   @override
   State<WidgetIncrementProduct> createState() => _WidgetIncrementProductState();
 }
 
-class _WidgetIncrementProductState extends State<WidgetIncrementProduct> {
+class _WidgetIncrementProductState extends State<WidgetIncrementProduct> with HelperFunctionsProductIncrementWidget {
 
  int startUpNumber = 0;
 
@@ -29,6 +31,7 @@ class _WidgetIncrementProductState extends State<WidgetIncrementProduct> {
 
   @override
   Widget build(BuildContext context) {
+   
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 16,vertical: 10),
       child: Column(
@@ -95,7 +98,42 @@ class _WidgetIncrementProductState extends State<WidgetIncrementProduct> {
          Container(
           height: 40,
           margin: const EdgeInsets.only(top: 20),
-          child: const AddToCartButton()),
+          child: InkWell(
+            onTap:()=>addProductToCart(widget.productModel,startUpNumber),
+            child:  Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(8),
+                color: Colors.blueGrey,
+                border: Border.all(
+                  color: Colors.black87,
+                ),
+                boxShadow:  [
+                        BoxShadow(
+                        offset:const Offset(0, 2),
+                        blurRadius:4.0,
+                        color:const Color(0xff000000).withOpacity(0.4),
+                      ),
+                    ]
+              ),
+              padding: const EdgeInsets.symmetric(vertical: 1),
+              child: const Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Icon(
+                  Icons.trolley,
+                    color: Colors.white,
+                    size: 12,
+                  ),
+                  SizedBox(
+                    width: 2,
+                  ),
+                  Text('Add to cart',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(color: Colors.white)),
+                ],
+              ),
+            ),
+            )),
         ],
       ),
     );

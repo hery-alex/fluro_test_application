@@ -3,6 +3,7 @@ import 'package:fluro_test_application/assets/assets_images.dart';
 import 'package:fluro_test_application/config/size_config.dart';
 import 'package:fluro_test_application/models/product_model/product_model.dart';
 import 'package:fluro_test_application/widgets/products/product_category_widget.dart';
+import 'package:fluro_test_application/widgets/ui/buttons/product_increment_widget.dart';
 import 'package:flutter/material.dart';
 
 class ProductOpenWidget extends StatelessWidget {
@@ -94,6 +95,14 @@ class ProductOpenWidget extends StatelessWidget {
                     ),
                   ],
                 ),
+                const SizedBox(height: 20,),
+                Container(
+                width: SizeConfig.screenWidth! / 2,
+                margin: const EdgeInsets.only(top: 10),
+                child:  WidgetIncrementProduct(productModel: productModel,)
+                ),
+                const SizedBox(height: 20,),
+
             ],
           ),
         ),

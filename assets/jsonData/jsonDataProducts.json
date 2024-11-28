@@ -7,7 +7,8 @@
          "productSKU": "E",
          "productPrice" : "200",
          "productImage" :"assets/images/cupcake-saltedCaramel.png",
-         "productCategory":"Cupcakes"
+         "productCategory":"Cupcakes",
+         "productCode" : 13423
        },
      
       {
@@ -16,7 +17,8 @@
         "productSKU": "D",
         "productPrice" : "150",
         "productImage" :"assets/images/croissant_chocolate.jpg",
-        "productCategory":"Croissant"
+        "productCategory":"Croissant",
+        "productCode" : 13523
       },
       {
         "productTitle":"Red Velvet Cake",
@@ -24,7 +26,8 @@
         "productSKU": "A",
         "productPrice" : "2500",
         "productImage" :"assets/images/cake-redVelvetCake.jpg",
-        "productCategory":"Cake"
+        "productCategory":"Cake",
+        "productCode" : 52385
       },
      
       {
@@ -33,7 +36,8 @@
         "productSKU": "D",
         "productPrice" : "150",
         "productImage" :"assets/images/croissant_glazed.jpg",
-        "productCategory":"Croissant"
+        "productCategory":"Croissant",
+        "productCode" : 63496
       },
       {
         "productTitle":"Lemon Muffin",
@@ -41,7 +45,8 @@
         "productSKU": "B",
         "productPrice" : "75",
         "productImage" :"assets/images/muffin-lemon.jpg",
-        "productCategory":"Muffin"
+        "productCategory":"Muffin",
+        "productCode" : 74392
       },
       {
         "productTitle":"Carrot Cake ",
@@ -49,7 +54,8 @@
         "productSKU": "A",
         "productPrice" : "2500",
         "productImage" :"assets/images/cake-carrotCake.jpg",
-        "productCategory":"Cake"
+        "productCategory":"Cake",
+        "productCode" : 42359
       },
       {
         "productTitle":"Raspberry Muffin",
@@ -57,7 +63,8 @@
         "productSKU": "B",
         "productPrice" : "75",
         "productImage" :"assets/images/raspberry_muffin.jpg",
-        "productCategory":"Muffin"
+        "productCategory":"Muffin",
+        "productCode" : 23405
       },
       
       {
@@ -66,7 +73,8 @@
         "productSKU": "C",
         "productPrice" : "25",
         "productImage" :"assets/images/brownie_classic.jpg",
-        "productCategory":"Brownie"
+        "productCategory":"Brownie",
+        "productCode" : 34606
       },
       {
         "productTitle":"Mint Brownie",
@@ -74,7 +82,8 @@
         "productSKU": "C",
         "productPrice" : "25",
         "productImage" :"assets/images/brownie_mint.jpg",
-        "productCategory":"Brownie"
+        "productCategory":"Brownie",
+        "productCode" : 67341
       },
       {
         "productTitle":"Carrot Cake Cupcake",
@@ -82,7 +91,8 @@
         "productSKU": "E",
         "productPrice" : "200",
         "productImage" :"assets/images/cupcake-carrotCake.jpg",
-        "productCategory":"Cupcakes"
+        "productCategory":"Cupcakes",
+        "productCode" : 52381
       },
       {
         "productTitle":"Biscoff Filling Cupcake",
@@ -90,7 +100,8 @@
         "productSKU": "E",
         "productPrice" : "200",
         "productImage" :"assets/images/cupcake-extra.jpg",
-        "productCategory":"Cupcakes"
+        "productCategory":"Cupcakes",
+        "productCode" : 22358
       },
       {
         "productTitle":"Oreo Brownie",
@@ -98,7 +109,8 @@
         "productSKU": "C",
         "productPrice" : "25",
         "productImage" :"assets/images/brownie_oreo.jpg",
-        "productCategory":"Brownie"
+        "productCategory":"Brownie",
+        "productCode" : 80234
       },
       {
         "productTitle":"Almonds Croissant",
@@ -106,7 +118,8 @@
         "productSKU": "D",
         "productPrice" : "150",
         "productImage" :"assets/images/croissant_almonds.jpg",
-        "productCategory":"Croissant"
+        "productCategory":"Croissant",
+        "productCode" : 23412
       },
       {
         "productTitle":"Sultanas Muffin",
@@ -114,7 +127,8 @@
         "productSKU": "B",
         "productPrice" : "75",
         "productImage" :"assets/images/muffin-sultanas.jpg",
-        "productCategory":"Muffin"
+        "productCategory":"Muffin",
+        "productCode" : 77349
       },
       {
         "productTitle":"Fruit CheeseCake ",
@@ -122,7 +136,8 @@
         "productSKU": "A",
         "productPrice" : "2500",
         "productImage" :"assets/images/cake-fruitCheesecake.jpg",
-        "productCategory":"Cake"
+        "productCategory":"Cake",
+        "productCode" : 11123
       }
     ]
 }

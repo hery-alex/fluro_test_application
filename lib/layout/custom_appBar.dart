@@ -14,7 +14,43 @@ class CustomAppbar extends StatelessWidget implements PreferredSizeWidget{
             clipper: WaveClipper(),
            child:  Container(
             width: SizeConfig.screenWidth,
-            color: Colors.orange,
+            color: Colors.blueGrey,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                 InkWell(
+                  onTap: (){
+                    Navigator.of(context).pushNamed('/cart');
+                  },
+                  child:  Container(
+                    margin: const EdgeInsets.all(10),
+                    width: 45,
+                    height: 45,
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      color: Colors.white,
+                      border: Border.all(
+                        color: Colors.black87,
+                        width: 1
+                      ),
+                       boxShadow:  [
+                          BoxShadow(
+                          offset:const Offset(0, 4),
+                          blurRadius:4.0,
+                          color:const Color(0xff000000).withOpacity(0.4),
+                        ),
+                        ]
+                    ),
+                    child:  Icon(
+                      Icons.shopping_cart,
+                      size: 25,
+                      color: Colors.blueGrey[900],
+                    ),
+                  ),
+                 )
+              ],
+            ),
           ),
       ),
   );
