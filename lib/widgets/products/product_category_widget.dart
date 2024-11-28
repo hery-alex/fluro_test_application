@@ -29,7 +29,7 @@ class ProductCategoryWidget extends StatelessWidget with MixinProductCategory {
                 ),
                 ),
               ),
-               getCategoryIcon(productModel),
+               getCategoryIcon(productModel,false),
             ],
           ),
     );

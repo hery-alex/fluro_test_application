@@ -65,20 +65,23 @@ class ShoppingCartView extends StatelessWidget with MixinShoppingCartViewHelper,
             stream: CartProvider.of(context)!.cart.cartProductsList, 
             builder:(context,AsyncSnapshot<List<CartProductModel>> snapshot) {
                 if(!snapshot.hasData){
-                  return  Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      Text.rich(
-                        TextSpan(
-                          text: 'Cart is empty',
-                          style:  TextStyle(
-                            color: Colors.blueGrey[50],
-                            fontSize: 30,
+                  return  SizedBox(
+                    height: SizeConfig.screenHeight! / 2.2,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Text.rich(
+                          TextSpan(
+                            text: 'Cart is empty',
+                            style:  TextStyle(
+                              color: Colors.blueGrey[50],
+                              fontSize: 30,
+                            )
                           )
                         )
-                      )
-                    ],
+                      ],
+                    ),
                   );
                 }
 
@@ -95,7 +98,7 @@ class ShoppingCartView extends StatelessWidget with MixinShoppingCartViewHelper,
                           
                            return Container(
                              height: 40,
-                             padding: const EdgeInsets.all(10),
+                             padding: const EdgeInsets.symmetric(vertical: 10,horizontal: 5),
                              decoration: BoxDecoration(
                               color: Colors.blueGrey[50],
                               border: Border(
@@ -116,8 +119,9 @@ class ShoppingCartView extends StatelessWidget with MixinShoppingCartViewHelper,
                                  Expanded(
                                   flex: 10,
                                    child: Row(
+                                    crossAxisAlignment: CrossAxisAlignment.center,
                                      children: [
-                                      getCategoryIcon(snapshot.data![index].productChosen!),
+                                      getCategoryIcon(snapshot.data![index].productChosen!,true),
                                        Text.rich(
                                         TextSpan(
                                           text: '${snapshot.data![index].productChosen!.productTitle}',
