@@ -35,6 +35,10 @@ class ProductOpenWidget extends StatelessWidget {
                   height: 250,
                   decoration: BoxDecoration(
                     color: Theme.of(context).colorScheme.surface,
+                    borderRadius: const BorderRadius.only( 
+                     bottomLeft: Radius.elliptical(300, 150),
+                     bottomRight: Radius.elliptical(300, 150)  
+                    ),
                     image:DecorationImage(
                     image: Image.asset(productModel.productImage!).image,
                     fit: BoxFit.fill,
@@ -66,31 +70,30 @@ class ProductOpenWidget extends StatelessWidget {
                 ),
               ),
                const SizedBox(height: 20,),
-                 Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                   children: [
-                     Flexible(
-                       child: Container(
-                        padding: const EdgeInsets.symmetric(horizontal: 16),
-                        child: Text.rich(
-                        textAlign: TextAlign.start,
-                        TextSpan(
-                          text: '    ${productModel.productDescription}',
-                          style:  TextStyle(
-                            color: Colors.grey[850],
-                            fontWeight: FontWeight.w700,
-                            fontStyle: FontStyle.normal,
-                            fontFamily: 'Open Sans',
-                            fontSize: 16),
-                        )
-                       ),
-                       ),
-                     ),
-                   ],
-                 ),
-                const SizedBox(height: 20,),
-                ProductCategoryWidget(productModel: productModel,), 
-              
+               ProductCategoryWidget(productModel: productModel,), 
+               const SizedBox(height: 20,),
+                Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Flexible(
+                      child: Container(
+                      padding: const EdgeInsets.symmetric(horizontal: 26),
+                      child: Text.rich(
+                      textAlign: TextAlign.start,
+                      TextSpan(
+                        text: '    ${productModel.productDescription}',
+                        style:  TextStyle(
+                          color: Colors.grey[850],
+                          fontWeight: FontWeight.w700,
+                          fontStyle: FontStyle.normal,
+                          fontFamily: 'Open Sans',
+                          fontSize: 16),
+                      )
+                      ),
+                      ),
+                    ),
+                  ],
+                ),
             ],
           ),
         ),
