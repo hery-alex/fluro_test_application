@@ -11,6 +11,6 @@ Stream<List<CartProductModel>> get cartProductsList => _cartProductsList.stream;
 
 Function(List<CartProductModel>) get addListToStream => _cartProductsList.sink.add;
 
- List<CartProductModel> get currentCart => _cartProductsList.value;
+ List<CartProductModel>? get currentCart => _cartProductsList.hasValue ? _cartProductsList.value : null;
 
 }

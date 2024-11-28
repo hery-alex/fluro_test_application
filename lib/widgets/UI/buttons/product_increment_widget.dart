@@ -1,3 +1,4 @@
+import 'package:fluro_test_application/assets/assets_images.dart';
 import 'package:fluro_test_application/mixins/mixin_helper_for_product_increment.dart';
 import 'package:fluro_test_application/models/product_model/product_model.dart';
 import 'package:flutter/material.dart';
@@ -116,18 +117,18 @@ class _WidgetIncrementProductState extends State<WidgetIncrementProduct> with He
                     ]
               ),
               padding: const EdgeInsets.symmetric(vertical: 1),
-              child: const Row(
+              child:  Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Icon(
-                  Icons.trolley,
-                    color: Colors.white,
-                    size: 12,
+                 SizedBox(
+                  width: 20,
+                  height: 20,
+                  child: Image(image: FluroImageAssets.cartIcon,)
                   ),
-                  SizedBox(
+                 const SizedBox(
                     width: 2,
                   ),
-                  Text('Add to cart',
+                 const Text('Add to cart',
                       textAlign: TextAlign.center,
                       style: TextStyle(color: Colors.white)),
                 ],

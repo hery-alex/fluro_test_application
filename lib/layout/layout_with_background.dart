@@ -6,8 +6,9 @@ import 'package:flutter/services.dart';
 
 class LayoutForBackground extends StatelessWidget {
   final Widget child;
-  final bool showBackButton;
-  const LayoutForBackground({super.key,required this.child,required this.showBackButton});
+  final bool showAppBarr;
+  final ImageProvider<Object>? backgroundImage;
+  const LayoutForBackground({super.key,required this.child,required this.showAppBarr,this.backgroundImage});
 
   @override
   Widget build(BuildContext context) {
@@ -27,13 +28,14 @@ class LayoutForBackground extends StatelessWidget {
                 decoration: BoxDecoration(
                   color: Colors.black87,
                   image:DecorationImage(
-                    image: FluroImageAssets.layoutBackgroundImage,
+                    image:backgroundImage ?? FluroImageAssets.layoutBackgroundImage,
                     fit: BoxFit.cover,
                     opacity: 0.2,
                   ),
                 ),
                 child: child,
               ),
+             if(showAppBarr) 
               const SizedBox(
                 height: 120,
                 child: CustomAppbar()

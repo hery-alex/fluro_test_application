@@ -1,3 +1,4 @@
+import 'package:fluro_test_application/assets/assets_images.dart';
 import 'package:fluro_test_application/config/size_config.dart';
 import 'package:fluro_test_application/layout/layout_with_background.dart';
 import 'package:fluro_test_application/screens/products_list/products_list_view.dart';
@@ -16,11 +17,15 @@ class RoutesConfiguration implements RouteConfig{
      switch(settings.name!){
       case '/':
         return  const LayoutForBackground(
-          showBackButton: false,
+          showAppBarr: true,
           child: ProductsListView(),
         );
       case '/cart': 
-        return const ShoppingCartView();  
+        return LayoutForBackground(
+          showAppBarr: false,
+          backgroundImage: FluroImageAssets.cartViewBackgroundImage,
+          child: const ShoppingCartView()
+          );  
       default : 
         return const SizedBox();    
     }
