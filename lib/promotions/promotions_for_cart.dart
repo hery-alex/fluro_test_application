@@ -59,7 +59,7 @@ class PromotionsForCart extends Promotions {
       int quanityE = productsWithE.fold(0, (sum, item) => sum + item.productQuantity!);
       if(quanityD == quanityE && quanityE !=0 && quanityD !=0){
         return CartPromotionModel(
-          productQuantity: quanityE,
+          productQuantity: quanityD + quanityE,
           totalPriceForProduct: (quanityD) * 300,
           promotionDescription: 'Meal Deal for £ 3.00',
           imageIcon: FluroImageAssets.croissantIcon,
@@ -69,7 +69,7 @@ class PromotionsForCart extends Promotions {
          int productsLeft = quanityD - quanityE;
             
         return CartPromotionModel(
-          productQuantity: quanityE,
+          productQuantity: quanityE + quanityD,
           totalPriceForProduct: (quanityE) * 300 + productsLeft * 150,
           promotionDescription: 'Meal Deal for £ 3.00',
           imageIcon: FluroImageAssets.croissantIcon,
@@ -78,7 +78,7 @@ class PromotionsForCart extends Promotions {
       }else if(quanityE > quanityD && quanityE !=0 && quanityD !=0 ) {
            int productsLeft = quanityE - quanityD;
          return CartPromotionModel(
-            productQuantity: quanityD+quanityE,
+            productQuantity: quanityD + quanityE,
             totalPriceForProduct: (quanityD) * 300 + productsLeft * 200,
             promotionDescription: 'Meal Deal for £ 3.00',
             imageIcon: FluroImageAssets.croissantIcon,

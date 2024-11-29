@@ -11,12 +11,30 @@ double calculateTotalPrice(List<CartProductModel> products) {
   return result / 100;
  }
 
- double calculatePriceAfterPromotions(List<CartPromotionModel> promotions) {
+ double calculatePriceAfterPromotions(List<CartPromotionModel> promotions,List<CartProductModel> products) {
    double result = 0;
-   for(var singleProduct in promotions){
+   for(var singlePromotion in promotions){
+        result = singlePromotion.totalPriceForProduct! + result;
+   }
+   for(var singleProduct in products){
+      if(singleProduct.productChosen!.productSKU == 'A'){
         result = singleProduct.totalPriceForProduct! + result;
+      }
    }
   return result / 100;
+ }
+
+ double calculateNumberOfProducts(List<CartPromotionModel> promotions,List<CartProductModel> products) {
+   double result = 0;
+   for(var singlePromotion in promotions){
+        result = singlePromotion.productQuantity! + result;
+   }
+   for(var singleProduct in products){
+      if(singleProduct.productChosen!.productSKU == 'A'){
+        result = singleProduct.productQuantity! + result;
+      }
+   }
+  return result ;
  }
 
 }

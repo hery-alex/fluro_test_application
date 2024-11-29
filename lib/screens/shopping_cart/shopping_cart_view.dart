@@ -58,6 +58,18 @@ class ShoppingCartView extends StatelessWidget with MixinShoppingCartViewHelper,
                 )
               )
             ),
+            const SizedBox(width: 20,),
+            InkWell(
+              onTap: (){
+                CartProvider.of(context)!.cart.addListToStream([]);
+                CartProvider.of(context)!.cart.addPromotions([]);
+              },
+              child: Icon(
+                Icons.refresh,
+                size: 30,
+                  color: Colors.blueGrey[50],
+              ),
+            )
           ],
          ),
         ),
@@ -65,9 +77,9 @@ class ShoppingCartView extends StatelessWidget with MixinShoppingCartViewHelper,
           child: StreamBuilder(
             stream: CartProvider.of(context)!.cart.cartProductsList, 
             builder:(context,AsyncSnapshot<List<CartProductModel>> snapshot) {
-                if(!snapshot.hasData){
+                if(!snapshot.hasData || snapshot.data!.isEmpty){
                   return  SizedBox(
-                    height: SizeConfig.screenHeight! / 2.2,
+                    height: SizeConfig.screenHeight! / 3.5,
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.center,
@@ -92,7 +104,7 @@ class ShoppingCartView extends StatelessWidget with MixinShoppingCartViewHelper,
                   children: [
                     Container(
                       height: SizeConfig.screenHeight! / 3.5,
-                      padding: const EdgeInsets.symmetric(vertical: 20,horizontal: 16),
+                      padding: const EdgeInsets.symmetric(vertical: 15,horizontal: 16),
                       child: ListView.builder(
                         itemCount: snapshot.data!.length,
                         itemBuilder:(context, index) {
@@ -167,8 +179,8 @@ class ShoppingCartView extends StatelessWidget with MixinShoppingCartViewHelper,
                       ),
                     ),
                     Container(
-                      padding: const EdgeInsets.symmetric(vertical: 20,horizontal: 16),
-                      height: 60,
+                      padding: const EdgeInsets.symmetric(vertical: 5,horizontal: 16),
+                      height: 30,
                       width: SizeConfig.screenWidth,
                       child:  Row(
                           mainAxisAlignment: MainAxisAlignment.end,
@@ -204,7 +216,7 @@ class ShoppingCartView extends StatelessWidget with MixinShoppingCartViewHelper,
           child: StreamBuilder(
             stream: CartProvider.of(context)!.cart.promotionsList, 
             builder:(context,AsyncSnapshot<List<CartPromotionModel>> snapshot) {
-                if(!snapshot.hasData){
+                if(!snapshot.hasData || snapshot.data!.isEmpty){
                   return  Container(
                     padding:const  EdgeInsets.only(right: 20),
                     height: 50,
@@ -320,10 +332,31 @@ class ShoppingCartView extends StatelessWidget with MixinShoppingCartViewHelper,
                             ));
                         },
                       ),
+                    ),   
+                     Container(
+                      padding: const EdgeInsets.symmetric(vertical: 5,horizontal: 16),
+                      height: 30,
+                      width: SizeConfig.screenWidth,
+                      child:  Row(
+                          mainAxisAlignment: MainAxisAlignment.end,
+                               children: [
+                               Text.rich(
+                                    TextSpan(
+                                      text: 'No of products: ${calculateNumberOfProducts(snapshot.data!,CartProvider.of(context)!.cart.currentCart!)}',
+                                      style:  TextStyle(
+                                        color: Colors.blueGrey[50],
+                                        fontWeight: FontWeight.w700,
+                                        fontSize: 15,
+                                      )
+                                    )
+                                   ),
+                               ],
+                             ),
                     ),
+                    const SizedBox(width: 10,), 
                     Container(
-                      padding: const EdgeInsets.symmetric(vertical: 20,horizontal: 16),
-                      height: 60,
+                      padding: const EdgeInsets.symmetric(vertical: 5,horizontal: 16),
+                      height: 30,
                       width: SizeConfig.screenWidth,
                       child:  Row(
                           mainAxisAlignment: MainAxisAlignment.end,
@@ -338,10 +371,10 @@ class ShoppingCartView extends StatelessWidget with MixinShoppingCartViewHelper,
                                       )
                                     )
                                    ),
-                                 const SizedBox(width: 20,),  
+                                const SizedBox(width: 20,),  
                                 Text.rich(
                                     TextSpan(
-                                      text: '£ ${calculatePriceAfterPromotions(snapshot.data!)}',
+                                      text: '£ ${calculatePriceAfterPromotions(snapshot.data!,CartProvider.of(context)!.cart.currentCart!)}',
                                       style:  TextStyle(
                                         color: Colors.blueGrey[50],
                                         fontSize: 18,
