@@ -13,12 +13,17 @@ mixin HelperFunctionsProductIncrementWidget<T extends StatefulWidget> on State<T
         
         if(model.productChosen!.productCode == productModel.productCode ){
          if( model.productQuantity != productQuantity){
-          print(' model ${model.productQuantity}');
           CartProductModel newModel = model.copyWith(productQuantity:productQuantity,totalPriceForProduct:productModel.productPrice! * productQuantity );
-          print('new model ${newModel.productQuantity}');
-           myCart.add(newModel);
-          }else{
-           myCart.add(model);
+        
+           int fourthIndex = myCart.indexWhere((element)=> element.productChosen!.productCode == newModel.productChosen!.productCode);
+           if(fourthIndex == -1){
+              myCart.add(newModel);
+           }
+          }else {
+             int thirdIndex = myCart.indexWhere((element)=> element.productChosen!.productCode == model.productChosen!.productCode);
+             if(thirdIndex == -1){
+               myCart.add(model);
+             }
           }
        }else if(model.productChosen!.productCode != productModel.productCode){
        
@@ -30,6 +35,7 @@ mixin HelperFunctionsProductIncrementWidget<T extends StatefulWidget> on State<T
          }else{
            myCart.add(model);
          }
+         
         int secondindex = myCart.indexWhere((element)=> element.productChosen!.productCode == productModel.productCode);
         if(secondindex == -1){
             myCart.add(CartProductModel(
@@ -39,10 +45,8 @@ mixin HelperFunctionsProductIncrementWidget<T extends StatefulWidget> on State<T
           ));
         }
        }
-
-        
      }
-     
+      myCart.removeWhere((element)=> element.productQuantity == 0);
       CartProvider.of(context)!.cart.addListToStream(myCart);
     }else{
    

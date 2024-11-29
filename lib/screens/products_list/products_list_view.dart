@@ -26,7 +26,7 @@ class ProductsListView extends StatelessWidget {
               crossAxisCount: 2,
               mainAxisSpacing: 20,
               crossAxisSpacing: 20,
-              childAspectRatio: 4/6
+              childAspectRatio: 4/7
               ), 
             itemBuilder: (context,int index){
                
