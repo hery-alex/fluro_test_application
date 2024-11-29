@@ -33,7 +33,7 @@ class ProductsListView extends StatelessWidget {
                return OpenContainer(
                     closedColor: Colors.transparent,
                     openColor: Colors.transparent,
-                    transitionType: ContainerTransitionType.fadeThrough,
+                    transitionType: ContainerTransitionType.fade,
                     transitionDuration:const Duration(milliseconds: 500),
                     closedElevation: 0,
                     closedBuilder: (context, action) {

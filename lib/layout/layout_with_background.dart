@@ -19,7 +19,7 @@ class LayoutForBackground extends StatelessWidget {
   Widget build(BuildContext context) {
   return AnnotatedRegion<SystemUiOverlayStyle>(
     value: const SystemUiOverlayStyle(
-      statusBarColor:  Color(0xffffffff),
+      statusBarColor:  Colors.blueGrey,
     ),
     child: SafeArea(
       child: Scaffold(

@@ -22,6 +22,7 @@ class FluroCheckoutApplication extends StatelessWidget {
     return ProductsProvider(
       child: CartProvider(
         child: MaterialApp(
+          debugShowCheckedModeBanner: false,
           title: 'Fluro Test',
           initialRoute: '/',
           onGenerateRoute: (settings) => RoutesConfiguration.onGenerateRoute(settings),
