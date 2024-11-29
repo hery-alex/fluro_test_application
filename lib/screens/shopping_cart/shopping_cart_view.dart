@@ -5,6 +5,7 @@ import 'package:fluro_test_application/mixins/mixin_shopping_cart_view_helper.da
 import 'package:fluro_test_application/models/cart_models/cart_product_model.dart';
 import 'package:fluro_test_application/models/cart_models/cart_promotion_model.dart';
 import 'package:fluro_test_application/states/cart/cart_provider.dart';
+import 'package:fluro_test_application/widgets/promotions/promotions_information.dart';
 import 'package:flutter/material.dart';
 
 class ShoppingCartView extends StatelessWidget with MixinShoppingCartViewHelper,MixinProductCategory{
@@ -68,6 +69,26 @@ class ShoppingCartView extends StatelessWidget with MixinShoppingCartViewHelper,
                 Icons.refresh,
                 size: 30,
                   color: Colors.blueGrey[50],
+              ),
+            ),
+            Expanded(
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  InkWell(
+                    onTap: () async{
+                       await showDialog<bool>(
+                          context: context,
+                          builder: (context) => const PromotionInformation(),
+                        );
+                    },
+                    child: Icon(
+                      Icons.info_rounded,
+                      size: 30,
+                        color: Colors.blueGrey[50],
+                    ),
+                  ),
+                ],
               ),
             )
           ],
