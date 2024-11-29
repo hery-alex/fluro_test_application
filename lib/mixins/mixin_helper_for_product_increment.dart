@@ -1,5 +1,6 @@
 import 'package:fluro_test_application/models/cart_models/cart_product_model.dart';
 import 'package:fluro_test_application/models/product_model/product_model.dart';
+import 'package:fluro_test_application/promotions/promotions_for_cart.dart';
 import 'package:fluro_test_application/states/cart/cart_provider.dart';
 import 'package:flutter/material.dart';
 
@@ -7,6 +8,7 @@ mixin HelperFunctionsProductIncrementWidget<T extends StatefulWidget> on State<T
   
 
   void addProductToCart(ProductModel productModel,int productQuantity){
+      Promotions cartPromotions = PromotionsForCart();
      List<CartProductModel> myCart =[];
     if(CartProvider.of(context)!.cart.currentCart != null && CartProvider.of(context)!.cart.currentCart!.isNotEmpty){
       for(var model in CartProvider.of(context)!.cart.currentCart!){ 
@@ -48,6 +50,7 @@ mixin HelperFunctionsProductIncrementWidget<T extends StatefulWidget> on State<T
      }
       myCart.removeWhere((element)=> element.productQuantity == 0);
       CartProvider.of(context)!.cart.addListToStream(myCart);
+      cartPromotions.updateCartWithPromotions(myCart,context);
     }else{
    
         myCart.add(CartProductModel(
@@ -56,6 +59,7 @@ mixin HelperFunctionsProductIncrementWidget<T extends StatefulWidget> on State<T
           totalPriceForProduct: productModel.productPrice! * productQuantity
        ));
       CartProvider.of(context)!.cart.addListToStream(myCart);
+      cartPromotions.updateCartWithPromotions(myCart,context);
     }
   }
 }
