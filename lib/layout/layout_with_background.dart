@@ -1,6 +1,7 @@
 import 'package:fluro_test_application/assets/assets_images.dart';
 import 'package:fluro_test_application/config/size_config.dart';
 import 'package:fluro_test_application/layout/custom_appBar.dart';
+import 'package:fluro_test_application/layout/end_drawer_filters.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -8,7 +9,11 @@ class LayoutForBackground extends StatelessWidget {
   final Widget child;
   final bool showAppBarr;
   final ImageProvider<Object>? backgroundImage;
-  const LayoutForBackground({super.key,required this.child,required this.showAppBarr,this.backgroundImage});
+  LayoutForBackground({super.key,required this.child,required this.showAppBarr,this.backgroundImage});
+  
+
+  final GlobalKey<ScaffoldState> _key = GlobalKey();
+
 
   @override
   Widget build(BuildContext context) {
@@ -18,6 +23,9 @@ class LayoutForBackground extends StatelessWidget {
     ),
     child: SafeArea(
       child: Scaffold(
+        key: _key,
+        endDrawerEnableOpenDragGesture: true,
+        endDrawer:const EndDrawerFilter(),
         backgroundColor: Colors.transparent,
         body:SafeArea(
           child: Stack(
@@ -36,9 +44,9 @@ class LayoutForBackground extends StatelessWidget {
                 child: child,
               ),
              if(showAppBarr) 
-              const SizedBox(
+               SizedBox(
                 height: 120,
-                child: CustomAppbar()
+                child: CustomAppbar(scaffoldKey: _key,)
               ),
             ],
           ),

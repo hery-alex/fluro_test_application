@@ -16,9 +16,9 @@ class RoutesConfiguration implements RouteConfig{
   Widget checkRoutePath(RouteSettings settings){
      switch(settings.name!){
       case '/':
-        return  const LayoutForBackground(
+        return   LayoutForBackground(
           showAppBarr: true,
-          child: ProductsListView(),
+          child: const ProductsListView(),
         );
       case '/cart': 
         return LayoutForBackground(
