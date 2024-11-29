@@ -70,10 +70,20 @@ class ProductClosedWidget extends StatelessWidget {
              ],
            ),
           const SizedBox(height: 10),
-         Container(
-          margin: const EdgeInsets.only(top: 10),
-          child: WidgetIncrementProduct(productModel: productModel,)
+          Text.rich(
+            textAlign: TextAlign.center,
+            TextSpan(
+              text: '£ ${productModel.productPrice! / 100}',
+              style:const TextStyle(
+                fontSize: 14,
+                color: Colors.black87,
+                fontWeight: FontWeight.w900,
+                fontStyle: FontStyle.normal,
+                fontFamily: 'Open Sans',
+              ) )
           ),
+          const SizedBox(height: 5),
+          WidgetIncrementProduct(productModel: productModel,)
         ],
       ),
     );

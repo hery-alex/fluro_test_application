@@ -90,7 +90,7 @@ class CustomAppbar extends StatelessWidget implements PreferredSizeWidget{
                           scaffoldKey.currentState?.openEndDrawer();
                         },
                         child: Container(
-                          margin: const EdgeInsets.only(top:12,bottom: 12,right: 30,left: 0),
+                          margin: const EdgeInsets.only(top:12,bottom: 12,right: 70,left: 0),
                           width: 45,
                           height: 45,
                           decoration: BoxDecoration(

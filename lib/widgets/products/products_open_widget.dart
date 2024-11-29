@@ -70,6 +70,22 @@ class ProductOpenWidget extends StatelessWidget {
                   )
                 ),
               ),
+                const SizedBox(height: 20,),
+                 Container(
+                  padding: const EdgeInsets.symmetric(horizontal: 16),
+                   child: Text.rich(
+                    textAlign: TextAlign.center,
+                    TextSpan(
+                      text: '£ ${productModel.productPrice! / 100}',
+                      style: TextStyle(
+                        fontSize: 35,
+                        color: Colors.grey[800],
+                        fontWeight: FontWeight.w900,
+                        fontStyle: FontStyle.normal,
+                        fontFamily: 'Open Sans',
+                      ) )
+                                   ),
+                 ),
                const SizedBox(height: 20,),
                ProductCategoryWidget(productModel: productModel,), 
                const SizedBox(height: 20,),
@@ -95,7 +111,6 @@ class ProductOpenWidget extends StatelessWidget {
                     ),
                   ],
                 ),
-                const SizedBox(height: 20,),
                 Container(
                 width: SizeConfig.screenWidth! / 2,
                 margin: const EdgeInsets.only(top: 10),
