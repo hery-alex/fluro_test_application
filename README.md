@@ -1,5 +1,5 @@
 # Checkout Application as a test for Fluro
-
+  
 # Requirements: 
 
 Implement the code for a supermarket checkout that calculates the total price of several items.
@@ -29,15 +29,45 @@ Implement the code for a supermarket checkout that calculates the total price of
 
  ## Landing Page: 
  -list of all products (productImage,productTitle,productPrice and capability of adding to cart) 
+
  ![dashboard](readmeImages/dashboard.png)  
 ------------------------------------------------------------------------------------------------
 
  -top left we have cart that is being updated real time and with number of products
+
  ![dashboard cart](readmeImages/dashboard_cart.png) 
  ------------------------------------------------------------------------------------------------
 
 - top right button will open the filters from right
  ->can choose filters to update the product list or can reset them 
+
  ![dashboard filters](readmeImages/dashboard_filters.png) 
  ------------------------------------------------------------------------------------------------
+
+ - adding to cart -> you can choose what product and the number of products to add to cart. This is independent from the cart itself which means : 
+     -> after you add the product the middle number will reset and not show what is already in cart 
+     -> if in the cart you have a product X 5 you can update from the list with what number you want and will update (0 means will dissapear from cart)
+     -> you cannot add 0 to cart if the product doesnt already exists in there
+
+
+ ## Product Page:
+ -  productImage,productTitle,productPrice and capability of adding to cart -> (same as product list)   
+
+ ![product page](readmeImages/product_page.png)
+
+
+ ## Cart Page : 
+
+    - you can see the promotions available 
+
+    ![cart promo available](readmeImages/promotions_available.png)
+
+    - on upper part of the cart we can see the products that were added  : 
+       -> product title then number of products and total price for that row 
+       -> we can also see the total number of products and total price 
+
+    - on lower part of the cart we can see if any promotions has been applied : 
+       -> we can see the promotions applied (title ) -> how many times has been applied and total price for those products in the promotion 
+       -> we can also see the total number of products and total price (which may be different from the original cart)  
                                                          
+     ![cart promo available](readmeImages/promotions_available.png)
