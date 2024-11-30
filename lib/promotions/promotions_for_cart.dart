@@ -34,7 +34,8 @@ class PromotionsForCart extends Promotions {
           totalPriceForProduct: (productsWithPromo) * 125 + productsLeft * cartProductModel.productChosen!.productPrice!,
           promotionDescription: '2 for £ 1.25',
           imageIcon: FluroImageAssets.muffinIcon,
-          promotionCode:1
+          promotionCode:1,
+          promotionAppliedTimes: productsWithPromo,
         );
       }else{
         return null;
@@ -47,7 +48,8 @@ class PromotionsForCart extends Promotions {
         totalPriceForProduct: (cartProductModel.productQuantity!) *  cartProductModel.productChosen!.productPrice!,
         promotionDescription: 'Buy 3, get one free',
         imageIcon: FluroImageAssets.brownieIcon,
-        promotionCode: 2
+        promotionCode: 2,
+        promotionAppliedTimes: productsWithPromo
       );
       }else{
         return null;
@@ -63,7 +65,8 @@ class PromotionsForCart extends Promotions {
           totalPriceForProduct: (quanityD) * 300,
           promotionDescription: 'Meal Deal for £ 3.00',
           imageIcon: FluroImageAssets.croissantIcon,
-          promotionCode:3
+          promotionCode:3,
+          promotionAppliedTimes: quanityD
         );
       }else if(quanityD > quanityE && quanityE !=0 && quanityD !=0) {
          int productsLeft = quanityD - quanityE;
@@ -73,7 +76,8 @@ class PromotionsForCart extends Promotions {
           totalPriceForProduct: (quanityE) * 300 + productsLeft * 150,
           promotionDescription: 'Meal Deal for £ 3.00',
           imageIcon: FluroImageAssets.croissantIcon,
-          promotionCode:3
+          promotionCode:3,
+          promotionAppliedTimes: quanityE
         );
       }else if(quanityE > quanityD && quanityE !=0 && quanityD !=0 ) {
            int productsLeft = quanityE - quanityD;
@@ -82,7 +86,8 @@ class PromotionsForCart extends Promotions {
             totalPriceForProduct: (quanityD) * 300 + productsLeft * 200,
             promotionDescription: 'Meal Deal for £ 3.00',
             imageIcon: FluroImageAssets.croissantIcon,
-            promotionCode:3
+            promotionCode:3,
+            promotionAppliedTimes: quanityD
           );
       }
       return null;

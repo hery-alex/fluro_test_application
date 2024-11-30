@@ -73,7 +73,7 @@ class ProductClosedWidget extends StatelessWidget {
           Text.rich(
             textAlign: TextAlign.center,
             TextSpan(
-              text: '£ ${productModel.productPrice! / 100}',
+              text: '£ ${double.parse('${productModel.productPrice! / 100}').toStringAsFixed(2)}',
               style:const TextStyle(
                 fontSize: 14,
                 color: Colors.black87,

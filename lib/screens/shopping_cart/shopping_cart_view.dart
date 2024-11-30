@@ -182,10 +182,10 @@ class ShoppingCartView extends StatelessWidget with MixinShoppingCartViewHelper,
                                    ),
                                  ),
                                  Expanded(
-                                  flex: 2,
+                                  flex: 3,
                                    child: Text.rich(
                                     TextSpan(
-                                      text: '£ ${snapshot.data![index].totalPriceForProduct! / 100}',
+                                      text: '£ ${double.parse('${snapshot.data![index].totalPriceForProduct! / 100}').toStringAsFixed(2)}',
                                       style:  TextStyle(
                                         color: Colors.blueGrey[900],
                                         fontSize: 14,
@@ -206,6 +206,27 @@ class ShoppingCartView extends StatelessWidget with MixinShoppingCartViewHelper,
                       child:  Row(
                           mainAxisAlignment: MainAxisAlignment.end,
                                children: [
+                               Text.rich(
+                                    TextSpan(
+                                      text: 'No of products: ${calculateNumberOfProducts(snapshot.data!)}',
+                                      style:  TextStyle(
+                                        color: Colors.blueGrey[50],
+                                        fontWeight: FontWeight.w700,
+                                        fontSize: 15,
+                                      )
+                                    )
+                                   ),
+                               ],
+                             ),
+                    ),
+                    const SizedBox(width: 10,), 
+                    Container(
+                      padding: const EdgeInsets.symmetric(vertical: 5,horizontal: 16),
+                      height: 30,
+                      width: SizeConfig.screenWidth,
+                      child:  Row(
+                          mainAxisAlignment: MainAxisAlignment.end,
+                               children: [
                                 Text.rich(
                                     TextSpan(
                                       text: 'TOTAL:',
@@ -219,7 +240,7 @@ class ShoppingCartView extends StatelessWidget with MixinShoppingCartViewHelper,
                                  const SizedBox(width: 20,),  
                                 Text.rich(
                                     TextSpan(
-                                      text: '£ ${calculateTotalPrice(snapshot.data!)}',
+                                      text: '£ ${double.parse('${calculateTotalPrice(snapshot.data!)}').toStringAsFixed(2)}',
                                       style:  TextStyle(
                                         color: Colors.blueGrey[50],
                                         fontSize: 18,
@@ -328,7 +349,7 @@ class ShoppingCartView extends StatelessWidget with MixinShoppingCartViewHelper,
                                   flex: 2,
                                    child: Text.rich(
                                     TextSpan(
-                                      text: 'X ${snapshot.data![index].productQuantity}',
+                                      text: 'X ${snapshot.data![index].promotionAppliedTimes}',
                                       style:  TextStyle(
                                         color: Colors.blueGrey[900],
                                         fontSize: 14,
@@ -341,7 +362,7 @@ class ShoppingCartView extends StatelessWidget with MixinShoppingCartViewHelper,
                                   flex: 2,
                                    child: Text.rich(
                                     TextSpan(
-                                      text: '£ ${snapshot.data![index].totalPriceForProduct! / 100}',
+                                      text: '£ ${double.parse('${snapshot.data![index].totalPriceForProduct! / 100}').toStringAsFixed(2)}',
                                       style:  TextStyle(
                                         color: Colors.blueGrey[900],
                                         fontSize: 14,
@@ -363,7 +384,7 @@ class ShoppingCartView extends StatelessWidget with MixinShoppingCartViewHelper,
                                children: [
                                Text.rich(
                                     TextSpan(
-                                      text: 'No of products: ${calculateNumberOfProducts(snapshot.data!,CartProvider.of(context)!.cart.currentCart!)}',
+                                      text: 'No of products: ${calculateNumberOfProductsWithPromotions(snapshot.data!,CartProvider.of(context)!.cart.currentCart!)}',
                                       style:  TextStyle(
                                         color: Colors.blueGrey[50],
                                         fontWeight: FontWeight.w700,
@@ -395,7 +416,7 @@ class ShoppingCartView extends StatelessWidget with MixinShoppingCartViewHelper,
                                 const SizedBox(width: 20,),  
                                 Text.rich(
                                     TextSpan(
-                                      text: '£ ${calculatePriceAfterPromotions(snapshot.data!,CartProvider.of(context)!.cart.currentCart!)}',
+                                      text: '£ ${double.parse('${calculatePriceAfterPromotions(snapshot.data!,CartProvider.of(context)!.cart.currentCart!)}').toStringAsFixed(2)}',
                                       style:  TextStyle(
                                         color: Colors.blueGrey[50],
                                         fontSize: 18,

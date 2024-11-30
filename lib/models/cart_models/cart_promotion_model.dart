@@ -8,6 +8,7 @@ class CartPromotionModel {
     this.promotionDescription,
     this.imageIcon,
     this.promotionCode,
+    this.promotionAppliedTimes
   });
 
   int? productQuantity;
@@ -15,4 +16,5 @@ class CartPromotionModel {
   String? promotionDescription;
   ImageProvider<Object>? imageIcon;
   int? promotionCode;
+  int? promotionAppliedTimes;
 }

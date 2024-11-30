@@ -59,6 +59,7 @@ mixin HelperFunctionsProductIncrementWidget<T extends StatefulWidget> on State<T
           productQuantity: productQuantity,
           totalPriceForProduct: productModel.productPrice! * productQuantity
        ));
+      myCart.removeWhere((element)=> element.productQuantity == 0); 
       CartProvider.of(context)!.cart.addListToStream(myCart);
       cartPromotions.updateCartWithPromotions(myCart,context);
     }
