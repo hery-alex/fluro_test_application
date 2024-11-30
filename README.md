@@ -28,11 +28,16 @@ Implement the code for a supermarket checkout that calculates the total price of
 - As a state management I opted for a simple yet very efficient way by combining the power of streams with RxDart and dependOnInheritedWidgetOfExactType from flutter SDK inheritedwidget.It can be used in the UI by calling StreamBuilder or we can listen to the streams in various files.
 
  ## Landing Page: 
- 
- ![dashboard](readmeImages/dashboard.png)  -list of all products (productImage,productTitle,productPrice and capability of adding to cart) 
- 
+ -list of all products (productImage,productTitle,productPrice and capability of adding to cart) 
+ ![dashboard](readmeImages/dashboard.png)  
+------------------------------------------------------------------------------------------------
 
- ![dashboard cart](readmeImages/dashboard_cart.png) -top left we have cart that is being updated real time and with number of products
+ -top left we have cart that is being updated real time and with number of products
+ ![dashboard cart](readmeImages/dashboard_cart.png) 
+ ------------------------------------------------------------------------------------------------
 
- ![dashboard filters](readmeImages/dashboard_filters.png) - top right button will open the filters from right 
+- top right button will open the filters from right
+ ->can choose filters to update the product list or can reset them 
+ ![dashboard filters](readmeImages/dashboard_filters.png) 
+ ------------------------------------------------------------------------------------------------
                                                          
