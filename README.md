@@ -70,4 +70,4 @@ Implement the code for a supermarket checkout that calculates the total price of
        -> we can see the promotions applied (title ) -> how many times has been applied and total price for those products in the promotion 
        -> we can also see the total number of products and total price (which may be different from the original cart)  
                                                          
-![cart promo available](readmeImages/promotions_available.png)
+![cart promo available](readmeImages/cart.png)
