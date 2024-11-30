@@ -1,6 +1,6 @@
 # Checkout Application as a test for Fluro
 
-## Requirements: 
+# Requirements: 
 
 Implement the code for a supermarket checkout that calculates the total price of several items.
 
@@ -21,12 +21,18 @@ Implement the code for a supermarket checkout that calculates the total price of
      D      150                      Buy D and E for £3 
      E      200                      Buy D and E for £3
 
-## Project Presented:
+# Project Presented:
 
 - Created a json with all the products (jsonDataProducts.json) which sits in assets. (Reason for creating this is to demonstrate capabilities of getting data from an API call) -> which is done in Repository->json_repository.dart
 - Used PageRouteBuilder for routes around the app (Routes-> routes_configuration.dart)
 - As a state management I opted for a simple yet very efficient way by combining the power of streams with RxDart and dependOnInheritedWidgetOfExactType from flutter SDK inheritedwidget.It can be used in the UI by calling StreamBuilder or we can listen to the streams in various files.
 
- # Landing Page: 
+ ## Landing Page: 
+ 
+ ![dashboard](readmeImages/dashboard.png)  -list of all products (productImage,productTitle,productPrice and capability of adding to cart) 
+ 
 
- ![dashboard](readmeImages/dashboard.png)
+ ![dashboard cart](readmeImages/dashboard_cart.png) -top left we have cart that is being updated real time and with number of products
+
+ ![dashboard filters](readmeImages/dashboard_filters.png) - top right button will open the filters from right 
+                                                         
