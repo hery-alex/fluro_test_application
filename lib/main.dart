@@ -1,6 +1,6 @@
-import 'package:fluro_test_application/routes/routes_configuration.dart';
-import 'package:fluro_test_application/states/cart/cart_provider.dart';
-import 'package:fluro_test_application/states/products/products_provider.dart';
+import 'package:fluro_test_application/UI_Layer/routes/routes_configuration.dart';
+import 'package:fluro_test_application/LOGIC_Layer/states/cart/cart_provider.dart';
+import 'package:fluro_test_application/LOGIC_Layer/states/products/products_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
